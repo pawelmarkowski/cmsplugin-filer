@@ -1,0 +1,6 @@
+FROM python:3.8-slim-buster
+ENV CUSTOM_COMPILE_COMMAND docker-pip-compile.sh
+RUN mkdir /pip-tools
+WORKDIR /pip-tools
+RUN pip install --no-cache-dir pip-tools
+CMD /pip-tools/docker-pip-compile.sh

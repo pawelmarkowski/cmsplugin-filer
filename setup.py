@@ -22,9 +22,8 @@ setup(
         'Topic :: Internet :: WWW/HTTP',
     ],
     install_requires=[
-        "Django >= 1.11",
+        "Django >= 2.2",
         "django-filer >= 1.2.0",
-
         "django-cms >= 3.4",
         "django-sekizai >= 0.4.2",
         "easy_thumbnails >= 1.0",
