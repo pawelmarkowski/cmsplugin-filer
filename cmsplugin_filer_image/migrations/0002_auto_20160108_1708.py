@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from django.conf import settings
 from django.db import migrations, models
 import filer.fields.file
 import django.db.models.deletion
@@ -22,6 +23,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='filerimage',
             name='image',
-            field=filer.fields.image.FilerImageField(on_delete=django.db.models.deletion.SET_NULL, default=None, blank=True, to='filer.Image', null=True, verbose_name='image'),
+            field=filer.fields.image.FilerImageField(on_delete=django.db.models.deletion.SET_NULL, default=None, blank=True, to=settings.FILER_IMAGE_MODEL, null=True, verbose_name='image'),
         ),
     ]

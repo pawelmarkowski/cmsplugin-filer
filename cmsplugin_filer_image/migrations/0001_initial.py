@@ -40,7 +40,7 @@ class Migration(migrations.Migration):
                 ('description', models.TextField(null=True, verbose_name='description', blank=True)),
                 ('target_blank', models.BooleanField(default=False, verbose_name='Open link in new window')),
                 ('file_link', filer.fields.file.FilerFileField(related_name='+', default=None, to='filer.File', blank=True, help_text='if present image will be clickable', null=True, verbose_name='file link', on_delete=models.CASCADE)),
-                ('image', filer.fields.image.FilerImageField(default=None, blank=True, to='filer.Image', null=True, verbose_name='image', on_delete=models.CASCADE)),
+                ('image', filer.fields.image.FilerImageField(default=None, blank=True, to=settings.FILER_IMAGE_MODEL, null=True, verbose_name='image', on_delete=models.CASCADE)),
                 ('page_link', cms.models.fields.PageField(blank=True, to='cms.Page', help_text='if present image will be clickable', null=True, verbose_name='page link')),
             ],
             options={

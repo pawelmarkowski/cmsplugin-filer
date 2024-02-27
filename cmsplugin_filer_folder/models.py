@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 import warnings
 from django.db import models
 from cms.models import CMSPlugin
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from filer.fields.folder import FilerFolderField
 from .conf import settings
 from cmsplugin_filer_utils import FilerPluginManager

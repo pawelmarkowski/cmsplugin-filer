@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from cms.models import CMSPlugin
 
@@ -79,7 +79,7 @@ class FilerFile(CMSPlugin):
             # added if, because it raised attribute error when file wasnt defined
             return self.get_file_name()
         return "<empty>"
-    
+
     class Meta:
         app_label = 'cmsplugin_filer_file'
 

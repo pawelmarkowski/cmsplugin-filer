@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from cms.plugin_pool import plugin_pool
 from cms.plugin_base import CMSPluginBase
 from django.templatetags.static import static
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from cmsplugin_filer_video import settings
 from cmsplugin_filer_video.models import FilerVideo
 from cmsplugin_filer_video.forms import VideoForm
